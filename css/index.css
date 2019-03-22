@@ -176,7 +176,7 @@ img {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 5px 12px;
+  padding: 0px;
   margin: 0px 15px;
   border: 1px solid white;
   border-radius: 0px;
@@ -221,15 +221,41 @@ img {
   padding-bottom: 30px;
   border-bottom: 1px dashed #777;
 }
+@media (max-width:500px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin-top: 5px;
+    padding-bottom: 4px;
+  }
+  .main-header .my-logo {
+    font-size: 5rem;
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 12px;
+    margin: 0px 0px 0px 0px;
+    border: 1px solid white;
+    border-radius: 0px;
+    background-color: white;
+  }
+  .main-header .my-logo:hover {
+    color: black;
+    background-color: white;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  height: auto;
 }
-header p {
+header .header-p {
   font-size: 1.6rem;
   font-family: inherit;
   color: black;
@@ -241,6 +267,26 @@ header p {
   height: 100%;
   background-color: white;
   text-align: justify;
+  border-bottom: 1px dashed black;
+}
+@media (max-width:500px) {
+  header {
+    padding-bottom: 4px;
+  }
+  header .header-p {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: black;
+    padding: 5px 12px;
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 0px;
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    text-align: justify;
+    border-bottom: 1px dashed black;
+  }
 }
 .home {
   text-align: center;
@@ -248,19 +294,48 @@ header p {
 .home .content-section {
   margin: 30px 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
-.home .content-section .img-content {
+.home .content-section .text-content .img-content {
   width: 48%;
   padding-left: 1%;
 }
-.home .content-section .img-content img {
+.home .content-section .text-content .img-content img {
   border-radius: 10px;
+}
+@media (max-width:500px) {
+  .home .content-section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 4px;
+  }
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 1%;
+  }
+  .home .content-section .text-content .p-boddy {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: black;
+    padding: 5px 12px;
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: justify;
+  }
+  .home .content-section .text-content .img-content {
+    width: 100%;
+  }
+  .home .content-section .text-content .img-content img {
+    border-radius: 10px;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -273,6 +348,35 @@ header p {
 .home .inverse-content .img-content {
   padding-right: 1%;
   padding-left: 0;
+}
+@media (max-width:500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 4px;
+  }
+  .home .inverse-content .text-content {
+    width: 100%;
+  }
+  .home .inverse-content .text-content .p-boddy {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: black;
+    padding: 5px 12px;
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: justify;
+  }
+  .home .inverse-content .text-content .img-content {
+    width: 100%;
+  }
+  .home .inverse-content .text-content .img-content img {
+    border-radius: 10px;
+  }
 }
 .home .content-destination {
   width: 75%;
@@ -290,6 +394,29 @@ header p {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width:500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+  }
+  .home .content-pick .destination {
+    width: 100%;
+  }
+  .home .content-pick .destination .p-boddy {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: black;
+    padding: 5px 12px;
+    margin: 0px;
+    border: 1px solid white;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: justify;
+  }
 }
 .home .btn {
   font-size: 1.5rem;
